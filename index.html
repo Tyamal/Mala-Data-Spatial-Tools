@@ -96,3 +96,21 @@
         document.getElementById('importButton').onclick = function() {
             document.getElementById('fileInput').click();
         };
+
+        // Handle file input change
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const geojson = JSON.parse(e.target.result);
+                    markers.length = 0; // Clear existing markers
+                    map.eachLayer(function(layer) {
+                        if (layer instanceof L.Marker) {
+                            map.removeLayer(layer);
+                        }
+                    });
+                    geojson.features.forEach(feature => {
+                        const coords = feature.geometry.coordinates;
+                        const latlng = L.latLng(coords[1], coords[0]);
+                        L.marker(latlng).addTo(map
