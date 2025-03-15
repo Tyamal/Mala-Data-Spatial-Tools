@@ -71,3 +71,10 @@
             };
             document.getElementById('geojsonOutput').value = JSON.stringify(geojson, null, 2);
         }
+
+        // Function to add marker on map click
+        map.on('click', function(e) {
+            const marker = L.marker(e.latlng).addTo(map);
+            markers.push(e.latlng);
+            updateGeoJSON();
+        });
