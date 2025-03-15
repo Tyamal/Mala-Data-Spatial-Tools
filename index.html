@@ -86,3 +86,8 @@
             const shareUrl = `${baseUrl}?coords=${encodeURIComponent(coordsParam)}`;
             document.getElementById('shareLink').value = shareUrl;
         };
+
+        // Function to export markers to GeoJSON
+        document.getElementById('exportButton').onclick = function() {
+            updateGeoJSON();
+        };
