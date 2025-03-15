@@ -44,7 +44,7 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
         // Initialize the map
-        const map = L.map('map').setView([51.505, -0.09], 13);
+        const map = L.map('map').setView([-6.208763, 106.845599], 13); // Set to Jakarta coordinates
 
         // Add OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -113,4 +113,4 @@
                     geojson.features.forEach(feature => {
                         const coords = feature.geometry.coordinates;
                         const latlng = L.latLng(coords[1], coords[0]);
-                        L.marker(latlng).addTo(map
+                        L.marker(latlng).add
