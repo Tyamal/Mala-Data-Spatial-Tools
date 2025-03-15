@@ -78,3 +78,11 @@
             markers.push(e.latlng);
             updateGeoJSON();
         });
+
+        // Function to share the map link
+        document.getElementById('shareButton').onclick = function() {
+            const baseUrl = window.location.href.split('?')[0];
+            const coordsParam = markers.map(latlng => `${latlng.lat},${latlng.lng}`).join(';');
+            const shareUrl = `${baseUrl}?coords=${encodeURIComponent(coordsParam)}`;
+            document.getElementById('shareLink').value = shareUrl;
+        };
