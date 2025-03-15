@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Titik A",
+        "description": "Ini adalah titik A"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.845599, -6.208763]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Titik B",
+        "description": "Ini adalah titik B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.845599, -6.218763]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Titik C",
+        "description": "Ini adalah titik C"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.855599, -6.208763]
+      }
+    }
+  ]
+}
