@@ -61,4 +61,8 @@
                 features: markers.map(latlng => ({
                     type: "Feature",
                     geometry: {
+                        type: "Point",
+                        coordinates: [latlng.lng, latlng.lat]
+                    },
+                    properties: {
           
